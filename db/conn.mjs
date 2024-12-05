@@ -11,7 +11,9 @@ try {
   console.log("connected");
 } catch (err) {
   console.log(err);
+  console.error("error connecting: ", err);
 }
 let db = conn.db("sample_training");
+let gradesCollection = db.collection("grades");
 
 export default db;
